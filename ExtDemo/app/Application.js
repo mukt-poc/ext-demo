@@ -20,10 +20,11 @@ Ext.define('ExtDemo.Application', {
     ],
 
     launch: function () {
-        
-Ext.Ajax.useDefaultXhrHeader = false;
+        Ext.Ajax.setUseDefaultXhrHeader(false);
+        Ext.Ajax.useDefaultXhrHeader = false;
 
 // Can also be specified in the request options
-Ext.Ajax.cors = true;
+        Ext.Ajax.cors = true;
+
     }
 });

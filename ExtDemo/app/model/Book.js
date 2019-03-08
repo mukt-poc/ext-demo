@@ -3,6 +3,7 @@ Ext.define('ExtDemo.model.Book', {
     fields: [
               'date_published',
               'author',
+             {"name": 'author.name',"mapping" : 'author.name', "type":"string"},
               'title',
               'content_html'
             ]

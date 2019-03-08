@@ -10,12 +10,16 @@ Ext.define('ExtDemo.view.main.MainController', {
     alias: 'controller.main',
 
     onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+        var details = Ext.create('ExtDemo.view.main.Detail',{
+            title : record.get('title'),
+            html : record.get('content_html')
+        });
+        details.show();
     },
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
+    control : {
+        'mainlist' : {
+            rowdblclick  : 'onItemSelected'
         }
     }
 });

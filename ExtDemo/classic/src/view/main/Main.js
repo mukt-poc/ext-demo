@@ -23,6 +23,5 @@ Ext.define('ExtDemo.view.main.Main', {
 
     items: [{
             xtype: 'mainlist'
-        
     }]
 });

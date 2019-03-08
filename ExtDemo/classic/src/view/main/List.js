@@ -15,35 +15,26 @@ Ext.define('ExtDemo.view.main.List', {
         type: 'books'
     },
 
-    height: 200,
-		//store : 'Objects',
-        store: Ext.create("ExtDemo.store.Books"), 
+    height: 590,
+		 store: Ext.create("ExtDemo.store.Books"), 
 
         columns : [{
             text : 'Published Date',
-            dataIndex : 'date_published'
+            dataIndex : 'date_published',
+            width : "20%"
         },{
             text : 'Author',
-            dataIndex : 'author'
+            dataIndex : 'author.name',
+            width : "20%"
         },{
             text : 'Title',
-            dataIndex : 'title'
+            dataIndex : 'title',
+            width : "60%"
         },{
             hidden:true,
             dataIndex : 'content_html'
         }],
-        plugins: [
-            {
-                ptype: 'rowexpander',
-                rowBodyTpl: [
-                    '<table>',
-                    '<tpl foreach=".">',
-                    '<tr><td>{$}</td><td>{.}</td></tr>',
-                    '</tpl>',
-                    '</table>'
-                ]
-            }
-        ],
+        
     viewConfig: {
         enableTextSelection: true
     }

@@ -879,6 +879,7 @@ $include-extdemo-application: dynamic(true);;
 $include-extdemo-model-book: dynamic(true);;
 $include-extdemo-override-ajax: dynamic(true);;
 $include-extdemo-store-books: dynamic(true);;
+$include-extdemo-view-main-detail: dynamic(true);;
 $include-extdemo-view-main-list: dynamic(true);;
 $include-extdemo-view-main-main: dynamic(true);;
 $include-extdemo-view-main-maincontroller: dynamic(true);;

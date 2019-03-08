@@ -6,24 +6,23 @@ Ext.define('ExtDemo.store.Books', {
     requires : ['ExtDemo.override.Ajax'],
     
     model: 'ExtDemo.model.Book',
-    
+    autoLoad : true,
     proxy: {
         type: 'ajax',
-        //url:'https://www.macstories.net/feed/json',
+        url:'https://cors-anywhere.herokuapp.com/https://macstories.net/feed/json',
         method : "GET",
-        actionMethod : 'read',
-        api     : {
-            read            : 'https://www.macstories.net/feed/json'
+        useDefaultXhrHeader: false,
+        cors: true,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
         },
         actionMethods : {
-            read: 'GET',
-            write: 'GET',
-            update: 'GET',
-            delete: 'GET'
+            read: 'GET'
         },
         reader: {
             type: 'json',
-            readProperty: 'items'
+            rootProperty: 'items'
         }
     }
 });
